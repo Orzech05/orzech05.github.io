@@ -64,6 +64,37 @@ main {
     padding: 10px;
 }
 
+/*Projects*/
+
+.project-container {
+    display: grid;
+    grid-template-columns: 135px;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas:
+        'image title' 
+        'image description' 
+        'image date';
+    margin: 10px;
+}
+
+.project-image {
+    image-rendering: pixelated;
+    grid-area: image;
+    width: 125px;
+    height: 125px;
+}
+
+.project-description {
+    grid-area: description;
+}
+
+.project-date {
+    grid-area: date;
+    margin-top: auto;
+}
+
+/*Text*/
+
 .divider {
     background-color: var(--foreground);
     color: var(--background);
@@ -90,7 +121,7 @@ main {
     color: var(--foreground);
 }
 
-.comment, footer {
+.comment, footer, .project-date {
     color: gray;
     font-style: italic;
     font-weight: lighter;
@@ -143,5 +174,14 @@ a:hover {
         width: 100%;
         padding: 1rem;
         border-radius: 0;
+    }
+
+    .project-container {
+        grid-template-columns: 110px;
+    }
+
+    .project-image {
+        width: 100px;
+        height: 100px;
     }
 }
