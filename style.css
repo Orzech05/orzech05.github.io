@@ -84,13 +84,19 @@ main {
     height: 125px;
 }
 
+.project-title {
+    overflow: hidden;
+}
+
 .project-description {
     grid-area: description;
+    overflow: hidden;
 }
 
 .project-date {
     grid-area: date;
     margin-top: auto;
+    overflow: hidden;
 }
 
 /*Text*/
