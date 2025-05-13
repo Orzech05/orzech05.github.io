@@ -71,13 +71,14 @@ main {
     grid-template-columns: 135px;
     grid-template-rows: min-content 1fr min-content;
     grid-template-areas:
-        'image title' 
-        'image description' 
-        'image date';
+        'image title title'
+        'image description description' 
+        'image tags date';
     margin: 10px;
 }
 
 .project-image {
+    grid-area: image;
     image-rendering: pixelated;
     grid-area: image;
     width: 125px;
@@ -85,6 +86,7 @@ main {
 }
 
 .project-title {
+    grid-area: title;
     padding-bottom: 5px;
     overflow: hidden;
 }
@@ -94,10 +96,28 @@ main {
     overflow: hidden;
 }
 
+.project-tags {
+    grid-area: tags;
+    overflow: hidden;
+}
+
 .project-date {
     grid-area: date;
     margin-top: auto;
     overflow: hidden;
+    text-align: right;
+}
+
+.tag {
+    background-color: #00000000;
+    border-radius: 2px;
+    border-width: 1px;
+    padding: 2px;
+    border-radius: 5px;
+    border-style:solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
 }
 
 /*Text*/
@@ -132,6 +152,7 @@ main {
     color: gray;
     font-style: italic;
     font-weight: lighter;
+    margin-right: 0;
 }
 
 .wavy span {
