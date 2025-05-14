@@ -71,9 +71,9 @@ main {
     grid-template-columns: 135px;
     grid-template-rows: min-content 1fr min-content;
     grid-template-areas:
-        'image title title'
+        'image title date'
         'image description description' 
-        'image tags date';
+        'image tags tags';
     margin: 10px;
 }
 
@@ -109,7 +109,10 @@ main {
 }
 
 .tag {
-    background-color: #00000000;
+    --main-color: var(--accent);
+
+    color: var(--main-color);
+    background-color: color-mix(in srgb, var(--main-color) 30%, rgba(0, 0, 0, 1));
     border-radius: 2px;
     border-width: 1px;
     padding: 2px;
