@@ -99,7 +99,7 @@ main {
 .project-tags {
     grid-area: tags;
     overflow: hidden;
-    max-height: 100px;
+    max-height: 98px;
 }
 
 .project-date {
@@ -177,12 +177,13 @@ h1 {
     color: var(--foreground);
 }
 
-li {
-    color: var(--foreground);
-}
-
 ul {
     list-style-type: square;
+    padding-left: 20px;
+}
+
+li {
+    color: var(--foreground);
 }
 
 footer {
