@@ -99,6 +99,7 @@ main {
 .project-tags {
     grid-area: tags;
     overflow: hidden;
+    max-height: 100px;
 }
 
 .project-date {
@@ -158,16 +159,12 @@ main {
 
 .tag {
     --main-color: var(--accent);
-
+    display: inline-block;
     color: var(--main-color);
     background-color: color-mix(in srgb, var(--main-color) 30%, rgba(0, 0, 0, 1));
-    border-radius: 2px;
-    border-width: 1px;
-    padding: 2px;
+    line-height: 23px;
     border-radius: 5px;
-    border-style:solid;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 2px 10px;
     white-space: nowrap;
 }
 
@@ -186,7 +183,6 @@ li {
 
 ul {
     list-style-type: square;
-    padding-left: 20px;
 }
 
 footer {
@@ -230,5 +226,11 @@ a:hover {
 
     .logo {
         white-space: nowrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-tags {
+        display: none;
     }
 }
