@@ -66,9 +66,9 @@ main {
 
 /*Projects*/
 
-.project-container {
+.project-container, .project-info-container {
     display: grid;
-    grid-template-columns: 135px;
+    grid-template-columns: min-content auto minmax(min-content, 1fr);
     grid-template-rows: min-content 1fr min-content;
     grid-template-areas:
         'image title title'
@@ -80,9 +80,14 @@ main {
 .project-image {
     grid-area: image;
     image-rendering: pixelated;
-    grid-area: image;
+    margin-right: 10px;
     width: 125px;
     height: 125px;
+}
+
+.project-info-container > .project-image {
+    width: 150px;
+    height: 150px;
 }
 
 .project-title {
@@ -229,10 +234,8 @@ a:hover {
     .logo {
         white-space: nowrap;
     }
-}
 
-@media (max-width: 500px) {
     .project-tags {
-        display: none;
+        max-height: 64px;
     }
 }
