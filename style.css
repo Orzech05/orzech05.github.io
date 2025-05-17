@@ -82,7 +82,7 @@ main {
 .project-container,
 .project-info-container {
     display: grid;
-    grid-template-columns: min-content auto minmax(min-content, 1fr);
+    grid-template-columns: auto auto minmax(min-content, 1fr);
     grid-template-rows: min-content 1fr min-content;
     grid-template-areas:
         'image title title'
@@ -96,7 +96,7 @@ main {
         'image title title'
         'image description description'
         'image tags date'
-        'links links links';
+        'links links date';
 }
 
 .project-image {
@@ -115,7 +115,7 @@ main {
 .project-title {
     grid-area: title;
     padding-bottom: 5px;
-    overflow: hidden;
+    overflow:scroll;
 }
 
 .project-description {
@@ -278,5 +278,19 @@ a:hover>.tag {
 
     .project-tags {
         max-height: 64px;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-tags {
+        display: none;
+    }
+
+    .project-info-container {
+    grid-template-areas:
+        'image title title'
+        'image description description'
+        'image date date'
+        'links links links';
     }
 }
