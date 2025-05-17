@@ -91,6 +91,14 @@ main {
     margin: 10px;
 }
 
+.project-info-container {
+    grid-template-areas:
+        'image title title'
+        'image description description'
+        'image tags date'
+        'links links links';
+}
+
 .project-image {
     grid-area: image;
     image-rendering: pixelated;
@@ -127,6 +135,12 @@ main {
     overflow: hidden;
     text-align: right;
     padding-right: 5px;
+}
+
+.project-links {
+    grid-area: links;
+    overflow: hidden;
+    max-height: 98px;
 }
 
 .project-container:hover .project-title {
@@ -238,7 +252,7 @@ a:hover {
 }
 
 a:hover>.tag {
-    --hover-color: var(--accent)
+    --hover-color: var(--accent);
 }
 
 /*Proper scaling*/
