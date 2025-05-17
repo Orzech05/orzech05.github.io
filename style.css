@@ -60,19 +60,33 @@ main {
     color: var(--foreground);
 }
 
+.logo:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.logo>span {
+    transition-duration: 0.2s;
+}
+
+.logo:hover>span {
+    background-color: var(--accent);
+}
+
 .navbar-list-element {
     padding: 10px;
 }
 
 /*Projects*/
 
-.project-container, .project-info-container {
+.project-container,
+.project-info-container {
     display: grid;
     grid-template-columns: min-content auto minmax(min-content, 1fr);
     grid-template-rows: min-content 1fr min-content;
     grid-template-areas:
         'image title title'
-        'image description description' 
+        'image description description'
         'image tags date';
     margin: 10px;
 }
@@ -85,7 +99,7 @@ main {
     height: 125px;
 }
 
-.project-info-container > .project-image {
+.project-info-container>.project-image {
     width: 150px;
     height: 150px;
 }
@@ -156,7 +170,9 @@ main {
     color: var(--foreground);
 }
 
-.comment, footer, .project-date {
+.comment,
+footer,
+.project-date {
     color: gray;
     font-style: italic;
     font-weight: lighter;
@@ -164,6 +180,7 @@ main {
 }
 
 .tag {
+    --main-color: var(--accent);
     --base-color: var(--hover-color, var(--main-color));
     display: inline-block;
     color: var(--base-color);
@@ -171,11 +188,13 @@ main {
     line-height: 23px;
     border-radius: 5px;
     padding: 2px 10px;
+    transition-duration: 0.2s;
     white-space: nowrap;
 }
 
 .tag i {
-  color: var(--base-color);
+    transition-duration: 0.2s;
+    color: var(--base-color);
 }
 
 .wavy span {
@@ -218,7 +237,7 @@ a:hover {
     text-decoration: underline;
 }
 
-a:hover .tag {
+a:hover>.tag {
     --hover-color: var(--accent)
 }
 
