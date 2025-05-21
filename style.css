@@ -90,7 +90,7 @@ main {
 }
 
 .project-info-container {
-    grid-template-columns: auto minmax(min-content, 1fr) min-content;
+    grid-template-columns: min-content;
     grid-template-areas:
         'image title title'
         'image description description'
