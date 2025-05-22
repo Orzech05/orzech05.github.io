@@ -86,7 +86,7 @@ main {
         'image description description'
         'image tags date';
 
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .project-info-container {
@@ -267,7 +267,9 @@ a:hover>.tag {
     --hover-color: var(--accent);
 }
 
-/*Proper scaling*/
+/*Scaling*/
+
+/*Fullscreen main when <=1000px*/
 
 @media (max-width: 1000px) {
     main {
@@ -290,16 +292,41 @@ a:hover>.tag {
     }
 }
 
+/*Adjust elements for more space when <=500px*/
+
 @media (max-width: 500px) {
-    .project-info-container {
-    grid-template-areas:
-        'image title title'
-        'image description description'
-        'image date date'
-        'links links links';
+    .project-info-container > .project-image {
+        margin: auto;
     }
-    
-    .project-tags {
+
+    .project-info-container > .project-date {
+        text-align: center;
+    }
+
+    .project-info-container {
+        text-align: center;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'image'
+            'title'
+            'description'
+            'date'
+            'tags'
+            'links';
+    }
+}
+
+/*Make even more space when <=320px*/
+
+@media (max-width: 320px) {
+    .project-image {
         display: none;
+    }
+
+    .project-container {
+        grid-template-areas:
+            'title title'
+            'description description'
+            'tags date';
     }
 }
