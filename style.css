@@ -299,6 +299,10 @@ a:hover>.tag {
         margin: auto;
     }
 
+    .project-container > .project-tags {
+        display: none;
+    }
+
     .project-info-container > .project-date {
         text-align: center;
     }
