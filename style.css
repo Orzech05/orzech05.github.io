@@ -232,6 +232,22 @@ li {
     color: var(--foreground);
 }
 
+input {
+    font-size: 1.5rem;
+    caret-color: var(--accent);
+    background-color: var(--background);
+
+    outline: none;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: var(--foreground);
+}
+
+input:focus {
+    border-style: solid;
+    border-color: var(--accent);
+}
+
 footer {
     text-align: center;
     margin-top: auto;
