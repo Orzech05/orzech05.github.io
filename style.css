@@ -12,6 +12,8 @@
     --accent: #3ae724;
     --text-color: white;
 
+    transition-duration: 0.2s;
+
     color: var(--text-color);
 }
 
@@ -43,10 +45,6 @@ nav {
 .logo:hover {
     text-decoration: none;
     color: var(--accent);
-}
-
-.logo>span {
-    transition-duration: 0.2s;
 }
 
 .logo:hover>span {
@@ -143,8 +141,6 @@ main {
 }
 
 .project-container:hover .project-title {
-    transition-duration: 0.2s;
-
     text-decoration: underline;
     color: var(--accent);
 }
@@ -207,8 +203,6 @@ footer,
     white-space: nowrap;
     border-radius: 5px;
 
-    transition-duration: 0.2s;
-
     --main-color: var(--accent);
     --base-color: var(--hover-color, var(--main-color));
 
@@ -217,7 +211,6 @@ footer,
 }
 
 .tag i {
-    transition-duration: 0.2s;
     color: var(--base-color);
 }
 
@@ -253,7 +246,6 @@ hr {
 /*Links*/
 
 a {
-    transition-duration: 0.2s;
     text-decoration: none;
     color: var(--foreground);
 }
