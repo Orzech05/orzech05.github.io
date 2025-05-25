@@ -211,7 +211,7 @@ a:hover>.tag {
 
 .social.tag {
     width: 100%;
-    padding: 10px;
+    padding: 7.5px 10px;
 }
 
 /*Projects Page*/
@@ -322,6 +322,10 @@ a:hover>.tag {
 /*Adjust elements for more space when <=500px*/
 
 @media (max-width: 500px) {
+    .links {
+        padding: 10px 0;
+    }
+    
     .project-info-container > .project-image {
         margin: auto;
     }
